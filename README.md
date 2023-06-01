@@ -16,7 +16,7 @@ GITHUB_CLIENT_SECRET=
 
 ## Issues
 
-- `app/page.tsx` and `app/lessons/page.tsx` should use the same `LessonList` component and `LessonListItem` component with the same data dependencies but the queries that use the fragments may differ (for example: when using a variable)
+- `app/page.tsx` and `app/episodes/page.tsx` should use the same `EpisodeList` component and `EpisodeListItem` component with the same data dependencies but the queries that use the fragments may differ (for example: when using a variable)
 
 ## Dummy data
 
