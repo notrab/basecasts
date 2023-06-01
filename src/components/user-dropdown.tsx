@@ -8,7 +8,7 @@ import { PlusIcon } from "@heroicons/react/20/solid";
 
 export function UserDropdown() {
   const { data: session, status } = useSession();
-  const isAdmin: boolean = session && session?.user?.groups?.includes("admin");
+  const isAdmin = session && session?.user?.groups?.includes("admin");
 
   if (status === "loading") return null;
 
@@ -39,15 +39,25 @@ export function UserDropdown() {
 
       <Menu as="div" className="relative ml-3">
         <div>
-          <Menu.Button className="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+          <Menu.Button className="flex rounded-full bg-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 overflow-hidden h-8 w-8">
             <span className="sr-only">Open user menu</span>
-            <Image
-              width={32}
-              height={32}
-              src={session?.user?.image}
-              alt={session?.user?.name}
-              className="rounded-full"
-            />
+            {session?.user?.image ? (
+              <Image
+                width={32}
+                height={32}
+                src={session?.user?.image || "/user.png"}
+                alt={session?.user?.name || "User"}
+                className="rounded-full"
+              />
+            ) : (
+              <svg
+                className="h-full w-full text-gray-400"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z" />
+              </svg>
+            )}
           </Menu.Button>
         </div>
         <Transition
