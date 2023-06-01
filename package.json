@@ -1,0 +1,46 @@
+{
+  "name": "basecasts",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "codegen": "graphql-codegen -r dotenv/config",
+    "codegen:watch": "graphql-codegen -r dotenv/config --watch"
+  },
+  "dependencies": {
+    "@headlessui/react": "1.7.14",
+    "@heroicons/react": "2.0.18",
+    "@types/node": "20.2.4",
+    "@types/react": "18.2.7",
+    "@types/react-dom": "18.2.4",
+    "@vercel/analytics": "1.0.1",
+    "@vercel/og": "0.5.6",
+    "autoprefixer": "10.4.14",
+    "classcat": "5.0.4",
+    "date-fns": "2.30.0",
+    "eslint": "8.41.0",
+    "eslint-config-next": "13.4.4",
+    "graphql": "16.6.0",
+    "graphql-request": "6.1.0",
+    "next": "13.4.4",
+    "next-auth": "4.22.1",
+    "postcss": "8.4.23",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-player": "2.12.0",
+    "react-textarea-autosize": "8.4.1",
+    "tailwindcss": "3.3.2",
+    "typescript": "5.0.4"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "4.0.0",
+    "@graphql-codegen/client-preset": "4.0.0",
+    "@tailwindcss/forms": "0.5.3",
+    "@tailwindcss/typography": "0.5.9",
+    "prettier": "2.8.8",
+    "tailwind-scrollbar-hide": "1.1.7"
+  }
+}
