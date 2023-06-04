@@ -10,7 +10,7 @@ import { UserDropdown } from "./user-dropdown";
 import BasecastsSVG from "../../public/basecasts.svg";
 
 const navigation = [
-  { name: "All Episodes", href: "/lessons" },
+  { name: "All Episodes", href: "/episodes" },
   { name: "About", href: "/about" },
 ];
 
@@ -18,9 +18,9 @@ export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="mx-auto z-50 relative">
+    <header className="container mx-auto z-50 relative">
       <nav
-        className="flex items-center justify-between p-6 lg:px-8"
+        className="flex items-center justify-between p-6 lg:px-0"
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
